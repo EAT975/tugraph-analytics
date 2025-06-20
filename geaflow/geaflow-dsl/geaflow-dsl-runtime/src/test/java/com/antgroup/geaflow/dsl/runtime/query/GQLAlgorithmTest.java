@@ -127,11 +127,11 @@ public class GQLAlgorithmTest {
     @Test
     public void testAlgorithm_010() throws Exception {
         QueryTester
-            .build()
-            .withGraphDefine("/query/modern_graph.sql")
-            .withQueryPath("/query/gql_algorithm_010.sql")
+             .build()
+            .withGraphDefine("/query/cycle_test_graph.sql")  // 使用自定义测试图
+            .withQueryPath("/query/gql_algorithm_010.sql")   // SQL查询文件
             .execute()
-            .checkSinkResult();
+            .checkSinkResult();  // 检查结果
     }
     
     @Test
