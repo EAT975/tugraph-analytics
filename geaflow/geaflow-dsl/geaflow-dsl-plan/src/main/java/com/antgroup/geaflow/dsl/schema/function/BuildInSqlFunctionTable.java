@@ -21,6 +21,7 @@ package com.antgroup.geaflow.dsl.schema.function;
 
 import com.antgroup.geaflow.dsl.common.exception.GeaFlowDSLException;
 import com.antgroup.geaflow.dsl.common.function.UDAF;
+import com.antgroup.geaflow.dsl.udf.graph.SingleVertexCycleDetection;
 import com.antgroup.geaflow.dsl.planner.GQLJavaTypeFactory;
 import com.antgroup.geaflow.dsl.schema.GeaFlowFunction;
 import com.antgroup.geaflow.dsl.udf.graph.AllSourceShortestPath;
@@ -208,6 +209,7 @@ public class BuildInSqlFunctionTable extends ListSqlOperatorTable {
             .add(GeaFlowFunction.of(KHop.class))
             .add(GeaFlowFunction.of(KCore.class))
             .add(GeaFlowFunction.of(ClosenessCentrality.class))
+            .add(GeaFlowFunction.of(SingleVertexCycleDetection.class))
             .add(GeaFlowFunction.of(WeakConnectedComponents.class))
             .add(GeaFlowFunction.of(TriangleCount.class))
             .add(GeaFlowFunction.of(IncWeakConnectedComponents.class))
